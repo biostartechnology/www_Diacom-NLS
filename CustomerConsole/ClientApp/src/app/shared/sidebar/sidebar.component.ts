@@ -15,14 +15,14 @@ export class SidebarComponent implements OnInit {
   @Output("onchange") onCategoryClick: EventEmitter<any> = new EventEmitter();
   public loggedIn = false;
   public samplePagesCollapsed = true;
-  public sidebarOpened = false;
+  public sidebarOpened = true;
   public SidebarIcon = false;
   selectedTab: string = "";
   public innerWidth: any;
   accountHolderName = '';
 
   navigateToSection(section) {
-    this.toggleOffSidebar();
+    //this.toggleOffSidebar();
     this.selectedTab = section.id;
     this.onCategoryClick.emit(section);
 
@@ -39,13 +39,13 @@ export class SidebarComponent implements OnInit {
   }
 
   toggleOffSidebar() {
-      this.sidebarOpened = !this.sidebarOpened;
-      if (this.sidebarOpened) {
-        document.querySelector('body').classList.add('sidebar-open');
-      }
-      else {
-        document.querySelector('body').classList.remove('sidebar-open');
-      }
+    this.sidebarOpened = !this.sidebarOpened;
+    if (this.sidebarOpened) {
+      document.querySelector('body').classList.add('sidebar-open');
+    }
+    else {
+      document.querySelector('body').classList.remove('sidebar-open');
+    }
   }
 
   toggleChildren(subTab) {
@@ -92,7 +92,7 @@ export class SidebarComponent implements OnInit {
           this.setCategoryView(data);
         }
       },
-      (error) => {});
+        (error) => { });
     }
     else {
       this.setCategoryView(HelperService.CategoryList);
@@ -129,9 +129,54 @@ export class SidebarComponent implements OnInit {
     return tree;
   }
 
-  ProductDetailsTab = [
+  ProductDetailsTab = [];
+  topMenu: any = [
+    {
+      name: 'Fraud Alerts',
+      children: [
+        { name: 'Biophilia-NLS by Singularity' }
+      ]
+    },
+    {
+      name: 'Features',
+      children: [
+        { name: 'System Requirements' },
+        { name: 'Macintosh compatable' }
+      ]
+    },
+    {
+      name: 'Contact US',
+      children: [
+        { name: 'Email Us' },
+        { name: 'Get a scan in your Area' },
+        { name: 'Find a Diacom Nearby' }
+      ]
+    },
+    {
+      name: 'TOS',
+      children: [
+        { name: 'Testimonials and Results Disclosure' },
+        { name: 'Terms of Use' },
+        { name: 'Shipping & Handling' }
+      ]
+    },
+    {
+      name: 'POPULAR BRANDS',
+      children: [
+        { name: 'Bio-Magnet Pairs' },
+        { name: 'Diacom USA' },
+        { name: 'Kelly Research Technologies' },
+        { name: 'Diacom Technology' },
+        { name: 'Diacomsoft' },
+        { name: 'Zyto' },
+        { name: 'Biostar Organix' },
+        { name: 'Dell' },
+        { name: 'View All' }
+      ],
+    }
 
   ];
+
 
   constructor(private http: HttputilityService, private auth: AuthService, private helper: HelperService, private router: Router,) {
     this.getCategoryDetails();
@@ -155,6 +200,7 @@ export class SidebarComponent implements OnInit {
   }
 
   ngOnInit() {
+    console.log(this.ProductDetailsTab);
     this.innerWidth = window.innerWidth;
     if (this.innerWidth <= 990) {
       this.SidebarIcon = true;

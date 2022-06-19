@@ -134,7 +134,8 @@ html,body{
     margin: 0.25rem;
     //background-color: #e0e6e7;
     overflow-y: auto;
-    height: calc(100% - 140px)
+    height: calc(100% - 140px);
+    overflow-x: hidden;
   }
   .main_content{
     width: 100%;

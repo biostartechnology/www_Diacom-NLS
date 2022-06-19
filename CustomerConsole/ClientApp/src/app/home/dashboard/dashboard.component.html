@@ -17,43 +17,46 @@
       </a>
     </ng-template>
   </ngb-carousel>
-  <div class="my-2 text-center">
-    <p>
-      <b>We provide quality, we meet deadlines, we exceed expectations and we do it for less.</b>
-    </p>
-    <div style="font-size:14px; color:#000">
-        <b>Start Saving. <a [routerLink]="['/session/login']">Log in</a> or <a [routerLink]="['/session/register']">create an account</a>.</b>
-    </div>
-    </div>
-  <div id="front-intro" class="p-4 w-75 card">
-    <p>
-    LA Signs is one of the fastest growing large format producers in the entire US.
-    We cater to privately owned print shops and brokers, ad agencies, sign shops, graphic designers and photo studios.
-    Our massive production volume allows us to pass savings onto an ever-growing customer base.
-    We started this business by offering the market’s lowest price vinyl banners and now we print thousands of them a day.
-    </p>
-    <p>
-        We pride ourselves on quality and speed. Next day turnarounds are the standard at LA Signs, not the exception.
-        Tight deadlines are a certainty in the print business, and for this reason,
-        we offer same day production for orders received by 12pm PST.
-    </p>
-  
-    <p>
-    LAsigns is working hard behind the scenes for resellers across the US.
-    We never lose sight of the trust that is placed in us by our customers.
-    From our 'eager-to-help' customer service staff to our seasoned production
-    team we aim for 100% satisfaction on every job large or small.
-    </p>
-  
-    <p>
-    We welcome you to our growing family. Please apply for an account today
-    </p>
-  
-  
-    <p>Sincerely, <br>
-    LA Signs
-    </p>
-  </div>
+ 
+  <mdb-tabs>
+    <mdb-tab title="Featured">
+      <div class="row justify-content-between">
+        <div class="card" style="width:18rem" *ngFor="let item of Products">
+          <img class="card-img-top" [src]="item.img" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">{{item.name}}</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a  class="btn btn-primary">View</a>
+          </div>
+        </div>
+      </div>
+    </mdb-tab>
+    <mdb-tab title="Bestselling">
+      <div class="row justify-content-between">
+        <div class="card" style="width:18rem" *ngFor="let item of Products">
+          <img class="card-img-top" [src]="item.img" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">{{item.name}}</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a  class="btn btn-primary">View</a>
+          </div>
+        </div>
+      </div>
+    </mdb-tab>
+    <mdb-tab title="New">
+      <div class="row justify-content-between">
+        <div class="card" style="width:18rem" *ngFor="let item of Products">
+          <img class="card-img-top" [src]="item.img" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">{{item.name}}</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a class="btn btn-primary">View</a>
+          </div>
+        </div>
+      </div>
+    </mdb-tab>
+  </mdb-tabs>
+
 </div>
 
 
@@ -96,6 +99,7 @@
 
 <!-- HOT-DEAL-AREA -->
 <section class="hot-deal-area p-4 m-4">
+  
   <div class="container">
 <div class="row">
 <div class="col-md-12 col-sm-12 col-xs-12">

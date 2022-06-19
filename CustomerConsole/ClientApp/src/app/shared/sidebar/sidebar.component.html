@@ -25,15 +25,12 @@
           <div class="col-md-6 col-sm-6 col-xs-12 p-0">
               <nav class="main-menu">
                   <ul id="navigation">
-                      <li class="active" *ngFor="let tab of ProductDetailsTab"><a class="d-flex align-items-center">{{tab.name}} <mat-icon>arrow_drop_down</mat-icon></a>
+                      <li class="active" *ngFor="let tab of topMenu"><a class="d-flex align-items-center">{{tab.name}} <mat-icon>arrow_drop_down</mat-icon></a>
                           <ul class="drop_nav">
                               <li *ngFor="let subTab of tab.children" [class.selected]="selectedTab == subTab.id" (click)="navigateToSection(subTab)"> 
                                 <a>{{subTab.name}}</a></li>
                           </ul>
                       </li>
-                      <li><a>Downloads</a>
-                      </li>
-                      <li><a>Help Center</a></li>
                   </ul>
               </nav>
               

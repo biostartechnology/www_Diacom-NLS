@@ -11,25 +11,25 @@ export class DashboardComponent implements OnInit {
   categoryId = "";
   categorySelected = false;
   slideInfo1 = [{
-    img: "/assets/dashboardImg/01.webp",
+    img: "/assets/dashboardImg/1.jpg",
     title: "Channel Letter",
     link: "",
     id: "d207802c-d55b-44fa-af81-84c4438969da"
   },
     {
-      img: "/assets/dashboardImg/02.webp",
+      img: "/assets/dashboardImg/2.webp",
       title: "Banner1",
       link: "",
       id: "d207802c-d55b-44fa-af81-84c4438969da"
     },
     {
-      img: "/assets/dashboardImg/03.webp",
+      img: "/assets/dashboardImg/3.jpg",
       title: "Banner2",
       link: "",
       id: "d207802c-d55b-44fa-af81-84c4438969da"
     },
     {
-      img: "/assets/dashboardImg/04.webp",
+      img: "/assets/dashboardImg/4.jpg",
       title: "Flag",
       link: "",
       id: "3df85492-46a3-470a-b87f-00df677cf53f"
@@ -84,6 +84,26 @@ export class DashboardComponent implements OnInit {
     },
    
     
+  ];
+  Products = [
+    {
+      name : "Biostar-Q, MAX Hand-pads (pair)",
+      link: "https://www.diacom-usa.com/biostar-q-max-hand-pads-pair",
+      img : "https://cdn11.bigcommerce.com/s-rjph4/images/stencil/608x608/products/547/525/img_44__94705.1521747650.jpg?c=2",
+      
+    },
+    {
+      name : "Biostar-Q, MAX Hand-pads (pair)",
+      link: "",
+      img : "https://cdn11.bigcommerce.com/s-rjph4/images/stencil/320w/products/546/523/81DRoobdjsL._SX425___23016.1516457985.jpg?c=2",
+      
+    },
+    {
+      name : "Biostar-Q, MAX Hand-pads (pair)",
+      link: "",
+      img : "https://cdn11.bigcommerce.com/s-rjph4/images/stencil/320w/products/545/520/biostar-q-advanced__58132.1513636643.jpg?c=2",
+      
+    }
   ];
   
   loggedIn = false;

@@ -2,68 +2,15 @@
 
   <!--  HEADER-AREA  -->
   
-    <!-- <div class="header-area d-none">
-        <div class="container-xl">
-            <div class="row">
-                <div class="col-md-6 col-sm-5">
-                    <div class="user-menu">
-                        <ul class="list-unstyled list-inline">
-                            <li class="dropdown dropdown-small">
-                                <a data-toggle="dropdown" data-hover="dropdown" class="dropdown-toggle" href="#"><span class="value">English </span><i class="fa fa-angle-down"></i></a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="#">English</a>
-                                    </li>
-                                    <li><a href="#">French</a>
-                                    </li>
-                                    <li><a href="#">German</a>
-                                    </li>
-                                </ul>
-                            </li>
-
-                            <li class="dropdown dropdown-small">
-                                <a data-toggle="dropdown" data-hover="dropdown" class="dropdown-toggle" href="#"><span class="value">USD </span><i class="fa fa-angle-down"></i></a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="#">USD</a>
-                                    </li>
-                                    <li><a href="#">INR</a>
-                                    </li>
-                                    <li><a href="#">GBP</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li>Welcome to NLS Vector</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-md-6 col-sm-7">
-                    <div class="header-right">
-                        <ul>
-                            <li [routerLink]="['/session/login']" *ngIf="!loggedIn"> 
-                                <a class="btn btn-link btn-sm">Login</a>
-                            </li>
-                            <li [routerLink]="['/session/register']" *ngIf="!loggedIn" >
-                                <a class="btn btn-link btn-sm">Register</a>
-                            </li>
-                            <li> 
-                                <a href="tel:1(888)739-8501" class="text-white" onclick="ga('send', 'event', 'Phone Click Tracking', 'Click to Call', '1(888)739-8501', 0);">
-                                    <mat-icon>phone</mat-icon> &nbsp; 1(888)739-8501
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> -->
-    <!-- Header-area:END -->
+  
     <div class="logo_area">
        
             <div class="row align-items-center">
                 <div class="col-sm-3 col-md-3 col-xs-6">
                     <div class="logo">
                         <a [routerLink]="['/home/dashboard']">
-                            <h4 class="ml-3" *ngIf="SidebarSmallScreen">Vector</h4>
-                          <img src="/assets/nls-vector-logo_1583309893__29535.webp" width="180px" *ngIf="!SidebarSmallScreen"/>
+                            <h4 class="ml-3" *ngIf="SidebarSmallScreen">DIACOM</h4>
+                          <img src="https://cdn11.bigcommerce.com/s-rjph4/images/stencil/250x50/diacom-usa_biotechnology_logo_tm_1531938157__01291.original.png" width="180px" *ngIf="!SidebarSmallScreen"/>
                         </a>
                     </div>
                 </div>
@@ -88,37 +35,7 @@
                             </div>
                         </div>
                     </div>
-                    <!-- <div class="search-area">
-                        <form>
-                            <div class="control-group d-flex justify-content-start">
-
-                                <ul class="categories-filter animate-dropdown">
-                                    <li class="dropdown">
-
-                                        <a class="dropdown-toggle" data-toggle="dropdown">All Categories <b class="caret"></b></a>
-
-                                        <ul class="dropdown-menu" role="menu">
-
-                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Fashion</a>
-                                            </li>
-                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Watches</a>
-                                            </li>
-                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">House Wares</a>
-                                            </li>
-                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Desktop</a>
-                                            </li>
-                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Smartphones</a>
-                                            </li>
-
-
-                                        </ul>
-                                    </li>
-                                </ul>
-                                <input class="search-field" placeholder="Search here..." />
-                                <a class="search-button"  (click)="onProductSearch()" type="button"> <mat-icon>search</mat-icon></a>
-                            </div>
-                        </form>
-                    </div> -->
+                   
                 </div>
                 <div class="col-sm-4 col-md-4 col-xs-6">
                     <div class="logoarea-right">
@@ -140,79 +57,15 @@
             </div>
        
     </div>
-    <!-- Logo-area -->
-    <!-- <div class="logo_area">
-        <div class="container-xl">
-            <div class="row">
-                <div class="col-sm-3 col-md-3 col-xs-6">
-                    <div class="logo">
-                        <a [routerLink]="['/home/dashboard']">
-                            <h4 class="ml-3" *ngIf="SidebarSmallScreen">Vector</h4>
-                          <img src="/assets/nls-vector-logo_1583309893__29535.webp" width="180px" *ngIf="!SidebarSmallScreen"/>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-md-6 col-xs-6">
-                    <div class="search-area">
-                        <form>
-                            <div class="control-group d-flex justify-content-start">
-
-                                <ul class="categories-filter animate-dropdown">
-                                    <li class="dropdown">
-
-                                        <a class="dropdown-toggle" data-toggle="dropdown">All Categories <b class="caret"></b></a>
-
-                                        <ul class="dropdown-menu" role="menu">
-
-                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Fashion</a>
-                                            </li>
-                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Watches</a>
-                                            </li>
-                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">House Wares</a>
-                                            </li>
-                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Desktop</a>
-                                            </li>
-                                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Smartphones</a>
-                                            </li>
-
-
-                                        </ul>
-                                    </li>
-                                </ul>
-                                <input class="search-field" placeholder="Search here..." />
-                                <a class="search-button"  (click)="onProductSearch()" type="button"> <mat-icon>search</mat-icon></a>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-                <div class="col-sm-3 col-md-3 col-xs-none">
-                    <div class="bg-secondary p-2 d-flex align-items-center justify-content-center">
-                      
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> -->
-    <!-- LOGO-AREA:END -->
-    
-    
-
-<!-- Header-AREA END -->
-
-
-<!-- <div id="topLine" class="text-center align-items-center fixed-top">
-    <div style="margin: auto;" *ngFor="let m of notificationMesg">
-      {{m.Message}}
-    </div>
-  </div> -->
+   
   
   <div id="la-topnav" class="d-none">
     <div class="container-xl">
       <mat-icon class="menu_icon" *ngIf="SidebarSmallScreen" (click)="toggleOffSidebar()">menu</mat-icon>
       <div class="la-brand pull-left" >
           <a [routerLink]="['/home/dashboard']">
-              <h4 class="ml-3" *ngIf="SidebarSmallScreen">Vector NLS</h4>
-            <img src="/assets/nls-vector-logo_1583309893__29535.webp" width="180px" *ngIf="!SidebarSmallScreen"/>
+              <h4 class="ml-3" *ngIf="SidebarSmallScreen">Diacom NLS</h4>
+            <img src="https://cdn11.bigcommerce.com/s-rjph4/images/stencil/250x50/diacom-usa_biotechnology_logo_tm_1531938157__01291.original.png" width="180px" *ngIf="!SidebarSmallScreen"/>
           </a>
       </div>
   
